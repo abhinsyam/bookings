@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>My nice page</title>
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+     <style>
+          .my-footer {
+               height: 5em;
+               background-color: #163b65;
+               margin-top: 1em;
+               padding: 1em;
+               color: #FFFFFF;
+               font-size: 80%;
+          }
+
+          p {}
+     </style>
+</head>
+
+<body>
+
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+               <a class="navbar-brand" href="#">Navbar</a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                         <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="about.html">About</a>
+                         </li>
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                   Rooms
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                   <li><a class="dropdown-item" href="generals.html">King's ROOM</a></li>
+                                   <li><a class="dropdown-item" href="majors.html">Queen-ROOM</a></li>
+                              </ul>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="reservation.html" tabindex="-1" aria-disabled="true">Book
+                                   Now</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+                         </li>
+                    </ul>
+                    <form class="d-flex">
+                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                         <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+               </div>
+          </div>
+     </nav>
+
+
+     <div id="main-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+               <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">               
+               <div class="carousel-item active">
+                    <img src="static/images/thar1.jpg" class="d-block w-100" alt="Woman and Laptop">
+                    <div class="carousel-caption d-none d-md-block">
+                         <h5>First slide label</h5>
+                         <p>Some representative placeholder content for the 1st slide.</p>
+                    </div>
+               </div>
+               <div class="carousel-item">
+                    <img src="static/images/thar2.jpg" class="d-block w-100" alt="Outside Image">
+                    <div class="carousel-caption d-none d-md-block">
+                         <h5>Second slide label</h5>
+                         <p>Some representative placeholder content for the 2nd slide.</p>
+                    </div>
+               </div>
+               <div class="carousel-item">
+                    <img src="static/images/thar3.jpg" class="d-block w-100" alt="Tray with Coffee">
+                    <div class="carousel-caption d-none d-md-block">
+                         <h5>Third slide label</h5>
+                         <p>Some representative placeholder content for the 3rd slide.</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+
+
+
+     <div class="container">
+
+          <div class="row">
+               <div class="col">
+                    <h1 class="text-center mt-4">Welcome to THAR Bed and Breakfast</h1>
+
+                    <p>“You have power over your mind - not outside events. Realize this, and you will find strength.
+                         Dwell on the beauty of life. Watch the stars, and see yourself running with them.
+
+                         Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the
+                         truth.
+                         If it is not right do not do it; if it is not true do not say it.
+                         What we do now echoes in eternity.”
+                    </p>
+               </div>
+          </div>
+
+          <div class="row">
+               <div class="col text-center">
+                    <a href="/make-reservation" class="btn btn-success">Make Reservation Now</a>
+               </div>
+          </div>
+     </div>
+
+     <div class="row my-footer">
+          <div class="col">
+               Left
+          </div>
+          <div class="col">
+               Middle
+          </div>
+          <div class="col">
+               Right
+          </div>
+     </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+</body>
+
+</html>
