@@ -1,0 +1,111 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+            <img src="/static/images/beach2.jpg" class="img-fluid img-thumbnail room-image mx-auto d-block"
+                alt="Room Image">
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mt-4">Generals Quarters..</h1>
+
+            <p>“You have power over your mind - not outside events. Realize this, and you will find strength.
+                Dwell on the beauty of life. Watch the stars, and see yourself running with them.
+
+                Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the
+                truth.
+                If it is not right do not do it; if it is not true do not say it.
+                What we do now echoes in eternity.”
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <a id="check-availability-button" href="#!" class="btn btn-success">Check Availability</a>
+        </div>
+    </div>
+</div>
+
+{{end}}
+
+
+{{define "js"}}
+
+<script>
+    document.getElementById("check-availability-button").addEventListener("click", async () => {
+        const { value: formValues } = await Swal.fire({
+            title: "Multiple inputs",
+            html: `
+            <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row" id="reservation-dates-modal">
+                                        <div class="col">
+                                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+                                        </div>
+                                        <div class="col">
+                                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="End Departure">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+        `,
+
+        
+
+        focusConfirm: false,
+          showCancelButton: true, // Optional: Add a Cancel button
+        preConfirm: () => {
+            const input1 = document.getElementById("start").value;
+            const input2 = document.getElementById("end").value;
+            if (!input1 || !input2) {
+                Swal.showValidationMessage("Please fill in both fields");
+            return null;
+            }
+            return [input1, input2];
+        },
+
+        didOpen: () => {
+            const startIP = document.querySelector('input[name="start"]');       
+            const endIP = document.querySelector('input[name="end"]');
+
+            startIP.removeAttribute('disabled');
+            endIP.removeAttribute('disabled');
+
+        
+        if (startIP && endIP) {
+            console.log("Inside if");
+            const datepicker = new Datepicker(startIP, {
+            });
+
+            const datepicker2 = new Datepicker(endIP, {
+            });
+        }
+        },
+        
+        });
+
+
+
+        if (formValues) {
+            Swal.fire(`You entered: ${JSON.stringify(formValues)}`);
+        }
+    });
+
+</script>
+
+{{end}}
